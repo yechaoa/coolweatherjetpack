@@ -3,7 +3,7 @@
 
 这里我先给出一张酷欧天气Jetpack版的架构设计图，这张图是模仿Google Codelabs的Sunshine项目画出来的。拥有良好架构设计的项目都是可以用简洁清晰的架构图表示出来的，而一个杂乱无章没有架构设计的项目则很难用架构图表示出来。
 
-<img src="https://raw.githubusercontent.com/guolindev/coolweatherjetpack/master/images/architecture.png" width="750" />
+<img src="https://raw.githubusercontent.com/guolindev/coolweatherjetpack/master/images/architecture.jpg" width="750" />
 
 上述架构图可能一开始看你会找不着重点，其实这张架构图非常清晰，我来带大家解读一下。
 
@@ -15,7 +15,7 @@
 
 黄色部分表示的是仓库层，仓库层要做的工作是自主判断接口请求的数据应该是从数据库中读取还是从网络中获取，并将数据返回给调用方。如果是从网络中获取的话还要将这些数据存入到数据库当中，以避免下次重复从网络中获取。简而言之，仓库的工作就是在本地和网络数据之间做一个分配和调度的工作，调用方不管你的数据是从何而来的，我只是要从你仓库这里获取数据而已，而仓库则要自主分配如何更好更快地将数据提供给调用方。
 
-接下来灰色部分表示是的本地数据层，实现方式并不固定，我使用了LitePal来进行数据持久化处理，你也可以使用别的框架。
+接下来灰色部分表示是的本地数据层，实现方式并不固定，我使用了<a href="https://github.com/LitePalFramework/LitePal" target="_blank">LitePal</a>来进行数据持久化处理，你也可以使用别的框架。
 
 最后红色部分表示的是网络数据层，这里使用了Retrofit从web服务接口获取数据。
 

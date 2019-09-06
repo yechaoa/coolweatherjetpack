@@ -8,9 +8,9 @@ import retrofit2.http.Query
 interface WeatherService {
 
     @GET("api/weather")
-    fun getWeather(@Query("cityid") weatherId: String, @Query("key") key: String): Call<HeWeather>
+    fun getWeather(@Query("cityid") weatherId: String): Call<HeWeather>
 
     @GET("api/bing_pic")
-    fun getBingPck(): Call<String>
+    fun getBingPic(): Call<String>
 
 }
