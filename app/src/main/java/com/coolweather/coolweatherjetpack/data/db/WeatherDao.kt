@@ -6,6 +6,9 @@ import com.coolweather.coolweatherjetpack.CoolWeatherApplication
 import com.coolweather.coolweatherjetpack.data.model.weather.Weather
 import com.google.gson.Gson
 
+/**
+ * 天气 数据库相关操作
+ */
 class WeatherDao {
 
     fun cacheWeatherInfo(weather: Weather?) {

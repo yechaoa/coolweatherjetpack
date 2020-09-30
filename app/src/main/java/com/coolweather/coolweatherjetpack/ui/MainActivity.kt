@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val viewModel = ViewModelProviders.of(this, InjectorUtil.getMainModelFactory()).get(MainViewModel::class.java)
+        //是否缓存过 打开过即缓存过
         if (viewModel.isWeatherCached()) {
             val intent = Intent(this, WeatherActivity::class.java)
             startActivity(intent)

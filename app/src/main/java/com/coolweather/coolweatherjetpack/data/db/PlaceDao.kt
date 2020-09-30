@@ -5,6 +5,9 @@ import com.coolweather.coolweatherjetpack.data.model.place.County
 import com.coolweather.coolweatherjetpack.data.model.place.Province
 import org.litepal.LitePal
 
+/**
+ * 地区 数据库相关操作
+ */
 class PlaceDao {
 
     fun getProvinceList(): MutableList<Province> = LitePal.findAll(Province::class.java)

@@ -17,6 +17,9 @@ import com.coolweather.coolweatherjetpack.ui.area.ChooseAreaFragment.Companion.L
 import kotlinx.coroutines.launch
 import java.util.*
 
+/**
+ * 逻辑处理
+ */
 class ChooseAreaViewModel(private val repository: PlaceRepository) : ViewModel() {
 
     var currentLevel = MutableLiveData<Int>()

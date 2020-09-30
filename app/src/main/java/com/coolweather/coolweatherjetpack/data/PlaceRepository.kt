@@ -5,6 +5,9 @@ import com.coolweather.coolweatherjetpack.data.network.CoolWeatherNetwork
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
+/**
+ * 数据层
+ */
 class PlaceRepository private constructor(private val placeDao: PlaceDao, private val network: CoolWeatherNetwork) {
 
     suspend fun getProvinceList() = withContext(Dispatchers.IO) {

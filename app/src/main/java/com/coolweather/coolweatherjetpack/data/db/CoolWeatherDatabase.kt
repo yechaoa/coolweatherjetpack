@@ -1,5 +1,8 @@
 package com.coolweather.coolweatherjetpack.data.db
 
+/**
+ * 获取数据库相关对象
+ */
 object CoolWeatherDatabase {
 
     private var placeDao: PlaceDao? = null
